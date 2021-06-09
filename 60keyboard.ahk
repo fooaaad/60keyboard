@@ -20,9 +20,9 @@ SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
 Gui, -Caption 
-Gui, Color, cFF9FE5
+Gui, Color, cFF56BA
 Gui, +ToolWindow
-Gui, Font, cFF9FE5
+Gui, Font, cFF56BA
 Gui, Add, text,, K
 Gui, +AlwaysOnTop +Owner
 Gui, Show, NoActivate y-22 x960 NA
@@ -88,7 +88,7 @@ MonitorLeftEdge() {
 ;inputttttttt
 ~f23::
 Suspend, Off
-Gui, Color, cFF9FE5
+Gui, Color, cFF56BA
 SetTimer, MoveCursor, 1
 return
 ~f23 up::
@@ -158,7 +158,7 @@ f:: Click, WheelDown
 
 
 space:: LButton
-z:: 
+v:: 
 keywait m  , U
 Click, Down
 return
