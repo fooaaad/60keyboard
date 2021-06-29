@@ -85,17 +85,28 @@ MonitorLeftEdge() {
 
 
 
+if FileExist("settings.ini"){
+Filereadline, line2, settings.ini, 2
+Hotkey, % line2 , key1
+Hotkey, % line2 " up" , key2
+}else {
+FileAppend, #toggle-hold key`n, settings.ini
+FileAppend, Capslock`n, settings.ini 
+reload
+return
+}
 ;inputttttttt
-~f23::
+key2:
+Suspend, On
+Gui, Color, c202020
+SetTimer, MoveCursor, off
+return
+key1:
 Suspend, Off
 Gui, Color, cFF56BA
 SetTimer, MoveCursor, 1
 return
-~f23 up::
-Suspend, On
-Gui, Color, c202020
-SetTimer, MoveCursor, off
- return
+
 
 
 ,::return
@@ -217,7 +228,7 @@ Esc::`
 
 /::up
 Ralt::left
-f23::right
+RCtrl::right
 AppsKey::down
 
 
