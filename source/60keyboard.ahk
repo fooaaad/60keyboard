@@ -25,9 +25,7 @@ Gui, +ToolWindow
 Gui, Font, cFF56BA
 Gui, Add, text,, K
 Gui, +AlwaysOnTop +Owner
-Gui, Show, NoActivate y-22 x960 NA
 Suspend, On
-Gui, Color, c202020
 ;##############################################################################################################################
 ;##############################################################################################################################
 ;##############################################################################################################################
@@ -98,12 +96,12 @@ return
 ;inputttttttt
 key2:
 Suspend, On
-Gui, Color, c202020
+Gui, hide 
 SetTimer, MoveCursor, off
 return
 key1:
 Suspend, Off
-Gui, Color, cFF56BA
+Gui, Show, NoActivate y-22 x960 NA
 SetTimer, MoveCursor, 1
 return
 
